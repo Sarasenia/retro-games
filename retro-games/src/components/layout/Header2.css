@@ -1,0 +1,27 @@
+.header2 {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.carousel-item img {
+    height:300px;
+    width: 300px;
+    object-fit: contain; 
+    object-position: center;
+}
+
+
+    .header2{
+        grid-area: p;
+       
+    }
+
+    .contenedor > div{
+    border: 1px solid white;
+    padding: 10px;
+    background-color: black;
+
+}
