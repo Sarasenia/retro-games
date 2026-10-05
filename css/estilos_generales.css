@@ -79,29 +79,11 @@ body {
     
     }
 
-    .menu{
-        grid-area: m;
-        padding: 10px;
-        line-height: 2.5;      
-    }
+   
 
-    .menu div:nth-of-type(1){
-        font-size: 20px;
-        text-align: center;
+ 
 
-    }
-
-    .principal{
-        grid-area: p;
-       
-    }
-
-    .productos{
-        grid-area: c;
-        padding: 10px;
-        line-height: 2.5; 
-        border: 1px solid white;
-    }
+    
 
     .footer{
         grid-area: f;
@@ -190,23 +172,7 @@ body {
 
 }
 
-.navbar  .nav-link, 
-.navbar .dropdown-item {
-    font-size:0.876rem; 
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
 
-}
-
-
-.navbar .dropdown-menu :hover{
-    background-color: rgb(0, 21, 255);
-}
-
-.buscador{
-    width: 500px;
-    max-width: 1000px;
-}
 
 .card-img-top {
   height: 200px;
@@ -226,12 +192,6 @@ body {
     text-align: center;
 }
 
-.carousel-item img {
-    height:300px;
-    width: 300px;
-    object-fit: contain; 
-    object-position: center;
-}
 
 
 
