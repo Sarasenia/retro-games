@@ -13,7 +13,7 @@ function ContenedorProductos(){
         const obtenerProductos = async () => {
             try {
                 await new Promise(resolve => setTimeout(resolve, 2000))
-                const response = await fetch("https://dummyjson.com/c/6818-d15d-4cfb-b045")
+                const response = await fetch("/api/productos")
 
                 if (!response.ok)
                     throw new Error()
@@ -41,7 +41,10 @@ function ContenedorProductos(){
 
     return <div className="cont-tarjetas w-100">
         {productos.map(producto =>
-            <TarjetaProducto key={producto.id} producto={producto} />
+            <TarjetaProducto
+                key={producto.id}
+                producto={producto}
+            />
         )}
     </div>
 }

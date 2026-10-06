@@ -2,9 +2,7 @@
 .navbar  .nav-link, 
 .navbar .dropdown-item {
     font-size:0.876rem; 
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-
+    margin-inline: 0.5rem;
 }
 
 
@@ -13,25 +11,13 @@
 }
 
 .buscador{
-    width: 500px;
-    max-width: 1000px;
+    width: 100%;
+    max-width: 32rem;
 }
 
- .menu{
-        grid-area: m;
-        padding: 10px;
-        line-height: 2.5;      
+@media (max-width: 991.98px) {
+    .buscador {
+        max-width: none;
+        margin-top: 0.5rem;
     }
-
-    .menu div:nth-of-type(1){
-        font-size: 20px;
-        text-align: center;
-
-    }
-
-    .contenedor > div{
-    border: 1px solid white;
-    padding: 10px;
-    background-color: black;
-
 }

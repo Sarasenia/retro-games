@@ -1,4 +1,8 @@
+import { useCarrito } from "../carrito/useCarrito"
+
 function TarjetaProducto({ producto }) {
+    const { productos, agregarAlCarrito } = useCarrito()
+    const estaEnCarrito = productos.some((item) => item.id === producto.id)
     const precioFormateado = producto.precio.toLocaleString('es-CL', {
         style: 'currency',
         currency: 'CLP',
@@ -9,7 +13,14 @@ function TarjetaProducto({ producto }) {
         <div className="card-body">
             <h5 className="card-title">{producto.titulo}</h5>
             <p className="card-text">Precio: {precioFormateado}</p>
-            <a href="#" className="btn btn-primary">Agregar al carrito</a>
+            <button
+                className="btn btn-primary"
+                type="button"
+                disabled={estaEnCarrito}
+                onClick={() => agregarAlCarrito(producto)}
+            >
+                {estaEnCarrito ? 'Agregado' : 'Agregar al carrito'}
+            </button>
         </div>
     </div>
 }

@@ -3,9 +3,12 @@ import Header from './components/layout/Header'
 import Menu from './components/layout/Menu'
 import Header2 from './components/layout/Header2'
 import Principal from './components/layout/Principal'
+import { CarritoProvider } from './components/carrito/CarritoProvider'
+import Footer from './components/layout/Footer'
 
 function App() {
-  return <div className="contenedor">
+  return <CarritoProvider>
+    <div className="contenedor">
       <div className="header">
          <Header />
       </div>
@@ -22,12 +25,9 @@ function App() {
         <Principal />
       </div>
 
-
-      <div className="footer">
-        footer 
-      </div>
+      <Footer />
     </div>
-  
+  </CarritoProvider>
 }
 
 export default App

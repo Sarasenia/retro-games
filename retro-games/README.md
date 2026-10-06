@@ -1,16 +1,35 @@
-# React + Vite
+# Retro Games Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Tienda de consolas retro creada con React, Vite y Bootstrap. Los productos se
+cargan desde DummyJSON y se pueden agregar o quitar del carrito. El formulario
+de contacto valida los datos localmente; todavía no envía mensajes.
 
-Currently, two official plugins are available:
+## Requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js y npm
 
-## React Compiler
+## Desarrollo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Desde esta carpeta, instala las dependencias y ejecuta el servidor:
 
-## Expanding the Oxlint configuration
+```sh
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Comandos disponibles:
+
+```sh
+npm run build
+npm run preview
+npm run lint
+```
+
+Los estilos propios se importan después de Bootstrap en `src/main.jsx` para que
+las reglas de la aplicación prevalezcan cuando tienen la misma especificidad.
+
+## Datos e imágenes
+
+Los productos se obtienen del endpoint de DummyJSON configurado en
+`vite.config.js`; el proxy de desarrollo evita bloqueos CORS. Las imágenes se
+sirven desde `public/img/`.
